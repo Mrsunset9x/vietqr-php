@@ -1,0 +1,50 @@
+{
+    "name": "mrsunset9x/vietqr-php",
+    "description": "Small, offline VietQR (NAPAS247) payload generator and strict parser for PHP, with optional SVG/PNG rendering.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/Mrsunset9x/vietqr-php",
+    "support": {
+        "issues": "https://github.com/Mrsunset9x/vietqr-php/issues",
+        "source": "https://github.com/Mrsunset9x/vietqr-php"
+    },
+    "keywords": ["vietqr", "napas", "qr", "vietnam", "payment"],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "bacon/bacon-qr-code": "^3.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5.62"
+    },
+    "suggest": {
+        "bacon/bacon-qr-code": "^3.0: enables the optional BaconQrRenderer (also requires ext-iconv).",
+        "ext-gd": "Enables PNG output with BaconQrRenderer.",
+        "ext-xmlwriter": "Enables SVG output with BaconQrRenderer."
+    },
+    "autoload": {
+        "psr-4": {
+            "VietQr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VietQr\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress",
+        "lint": "@php tools/lint.php",
+        "check": ["@lint", "@analyse", "@test"],
+        "benchmark": "@php tools/benchmark.php",
+        "example": "@php examples/basic.php"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": false
+    },
+    "archive": {
+        "exclude": ["/vendor", "/build", "/.git", "/.github", "/.phpstan.cache", "/.phpunit.cache", "/.idea", "/.vscode", "/tests", "/tools", "/docs/PLAN.md", "/examples", "/.gitignore", "/.gitattributes", "/phpunit.xml.dist", "/phpstan.neon", "/composer.lock"]
+    }
+}
