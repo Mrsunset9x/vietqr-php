@@ -11,17 +11,17 @@ nguyên. Có thể dùng trong PHP thuần hoặc Laravel mà không cần cấu
 
 ## Cài đặt
 
-Package chưa đăng trên Packagist. Chạy hai lệnh sau trong thư mục ứng dụng để cài
-trực tiếp từ GitHub:
+Package có trên [Packagist](https://packagist.org/packages/mrsunset9x/vietqr-php).
+Chạy lệnh sau trong thư mục ứng dụng:
 
 ```sh
-composer config repositories.vietqr vcs https://github.com/Mrsunset9x/vietqr-php.git
-composer require "mrsunset9x/vietqr-php:~0.1.0"
+composer require mrsunset9x/vietqr-php
 ```
 
-Lệnh trên chọn bản phát hành trong nhánh phiên bản `0.1.x`. Giữ `composer.lock` của
-ứng dụng trong Git để các môi trường cài cùng một commit. Dependency phục vụ phát
-triển package, như PHPUnit và PHPStan, không được cài vào ứng dụng tiêu thụ.
+Giữ `composer.lock` của ứng dụng trong Git để các môi trường cài cùng một phiên bản.
+Nếu cần giới hạn ở nhánh `0.1.x`, dùng `composer require "mrsunset9x/vietqr-php:~0.1.0"`.
+Dependency phục vụ phát triển package, như PHPUnit và PHPStan, không được cài vào
+ứng dụng tiêu thụ.
 
 Nếu đang sửa package cùng ứng dụng, xem cách dùng source local trong
 [hướng dẫn sử dụng](docs/USAGE.md).

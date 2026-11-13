@@ -6,25 +6,24 @@ cài package bằng Composer mà không cần tự khai báo repository.
 Tên package là `mrsunset9x/vietqr-php`. Repo nguồn:
 `https://github.com/Mrsunset9x/vietqr-php.git`.
 
-## Đăng ký lần đầu
+## Trạng thái phát hành
 
-1. Đăng nhập tài khoản quản lý package tại [Packagist](https://packagist.org/login/).
-2. Mở [Submit](https://packagist.org/packages/submit).
-3. Nhập URL repo GitHub ở trên, kiểm tra tên package rồi gửi.
-4. Chờ Packagist đọc `composer.json` và các tag. Kiểm tra trang package có bản `v0.1.0`.
-5. Bật đồng bộ GitHub theo [hướng dẫn chính thức](https://packagist.org/about#how-to-update-packages)
-   để Packagist nhận các tag mới khi push. Chỉ cấp quyền cần thiết cho repo này.
+Package đã được đăng ký tại
+[Packagist](https://packagist.org/packages/mrsunset9x/vietqr-php), không cần Submit lại.
+Bản `v0.1.0` đã được kiểm tra ngày 13/11/2026: cài trực tiếp vào ứng dụng mới,
+không khai báo repository riêng, nhận đúng commit của tag và chạy được ví dụ README.
+Phần lõi không kéo thêm package runtime.
 
-Khi package đã xuất hiện trên Packagist, kiểm tra bằng một thư mục ứng dụng mới,
-không khai báo repository GitHub hoặc path repository:
+Để kiểm tra một bản phát hành, chạy trong thư mục ứng dụng mới:
 
 ```sh
 composer require "mrsunset9x/vietqr-php:~0.1.0"
 composer show mrsunset9x/vietqr-php
 ```
 
-Sau khi cài thành công, cập nhật README để lấy lệnh Packagist làm cách cài chính.
-Hướng dẫn cài qua GitHub vẫn có thể giữ trong tài liệu phát triển.
+README đã dùng Packagist làm cách cài chính. Người duy trì có thể kiểm tra đồng bộ
+GitHub theo [hướng dẫn chính thức](https://packagist.org/about#how-to-update-packages)
+để Packagist nhận các tag mới khi push.
 
 ## Các bản tiếp theo
 
