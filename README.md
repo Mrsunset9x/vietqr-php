@@ -16,12 +16,12 @@ trực tiếp từ GitHub:
 
 ```sh
 composer config repositories.vietqr vcs https://github.com/Mrsunset9x/vietqr-php.git
-composer require "mrsunset9x/vietqr-php:dev-main"
+composer require "mrsunset9x/vietqr-php:~0.1.0"
 ```
 
-`dev-main` lấy mã từ nhánh `main`. Giữ `composer.lock` của ứng dụng trong Git để các
-môi trường cài cùng một commit. Dependency phục vụ phát triển package, như PHPUnit
-và PHPStan, không được cài vào ứng dụng tiêu thụ.
+Lệnh trên chọn bản phát hành trong nhánh phiên bản `0.1.x`. Giữ `composer.lock` của
+ứng dụng trong Git để các môi trường cài cùng một commit. Dependency phục vụ phát
+triển package, như PHPUnit và PHPStan, không được cài vào ứng dụng tiêu thụ.
 
 Nếu đang sửa package cùng ứng dụng, xem cách dùng source local trong
 [hướng dẫn sử dụng](docs/USAGE.md).
@@ -215,3 +215,5 @@ tối thiểu, cài ứng dụng mới và đọc ngược ảnh. Kết quả ki
 Package chưa được NAPAS chứng nhận và chưa kiểm thử quét trên app ngân hàng thật.
 
 Giấy phép MIT. Ghi nhận dự án .NET gốc và các thành phần kế thừa trong [NOTICE.md](NOTICE.md).
+
+Người duy trì package có thể xem [quy trình phát hành và đăng ký Packagist](docs/PUBLISHING.md).
